@@ -11,7 +11,7 @@
 
 SPIClass mySPI(SD_MOSI,SD_MISO,SD_SCK);
 
-uint32_t FULL_SPEED  = 0; // 50MHz
+uint32_t FULL_SPEED  = 4000000; // 4MHz
 
 void setup() {
   // Open serial communications and wait for port to open:
