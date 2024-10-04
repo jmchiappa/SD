@@ -71,22 +71,22 @@ namespace SDLib {
       
       boolean begin(SPIClass &spi) {
         spi_ = &spi;
-        begin(NC);
+        return begin(SD_CHIP_SELECT_PIN);
       }
 
       boolean begin(SPIClass &spi, uint32_t clock) {
         spi_ = &spi;
-        begin(clock,NC);
+        return begin(clock,SD_CHIP_SELECT_PIN);
       }
 
       boolean begin(SPIClass &spi, uint8_t csPin) {
         spi_ = &spi;
-        begin(csPin);
+        return begin(csPin);
       }
 
       boolean begin(SPIClass &spi, uint32_t clock, uint8_t csPin) {
         spi_ = &spi;
-        begin(clock,csPin);
+        return begin(clock,csPin);
       }
 
       boolean begin(uint8_t csPin = SD_CHIP_SELECT_PIN);
